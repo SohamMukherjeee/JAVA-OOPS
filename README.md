@@ -1,6 +1,7 @@
 # link 
 https://java-notes-blond.vercel.app/
-
+# G Docs
+https://docs.google.com/document/d/1AZ2YvvhCIfBw3U3O0flrPJKkGM54CRaclhq9CWNLlHA/edit?usp=sharing
 
 ## JAVA ROADMAP
 1. Four pillers of OOPS
