@@ -1,3 +1,6 @@
+// super: Refers to parent class
+
+
 class Animal {
     void eat() {
         System.out.println("Animal eats");
@@ -5,7 +8,9 @@ class Animal {
 }
 class Dog extends Animal {
     void eat() {
-        //super.eat();
+        //super.eat(); ---> without this, output will be "Dog eats too"
+        // but with super.eat()  -->Animal eats
+                                //Dog eats too
         System.out.println("Dog eats too");
     }
 }
@@ -16,3 +21,5 @@ public class Test {
         dog1.eat();
     }
 }
+
+
