@@ -1,0 +1,5 @@
+The static keyword in Java is used for memory management. 
+It means that the member (variable, method, block, or nested class) belongs to the class itself, not to instances of the class.
+
+means we can simply access the those variables,methods using direct from class , no need to create an object
+to get the access.
