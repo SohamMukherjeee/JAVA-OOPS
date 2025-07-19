@@ -1,0 +1,58 @@
+L->Liskov Substitution Principle (LSP)
+
+ In easy Language:
+
+ You should able to substitue the objects without breaking the code
+
+ example:
+
+  Parent parent;
+  parent=new C1() :-> it's working fine 
+
+  parent=new C2()  :-> it should be also working too, if not. Then it's not 
+                         following Liskov principle
+
+
+
+<----------------------------------------------------------------------------------------->
+                                     formal Language    
+<----------------------------------------------------------------------------------------->
+                            
+
+In formal Language:
+
+Subtypes must be substitutable for their base types. [***Very important Line***]
+
+Derived classes should extend base classes without changing their behavior.
+
+
+<-------------------------------code snippet for violation------------------------------>
+
+class Bird {
+    void fly() {}
+}
+
+class Sparrow extends Bird {
+    void fly() {} // OK
+}
+
+class Ostrich extends Bird {
+    void fly() {} //  Violates LSP - Ostrich can't fly!
+}
+
+<---------------------------Code Snippet for Liskov Principle ------------------------------------->
+
+interface Bird {}
+
+interface FlyingBird extends Bird {
+    void fly();
+}
+
+class Sparrow implements FlyingBird {
+    public void fly() {}
+}
+
+class Ostrich implements Bird {
+    // no fly method
+}
+

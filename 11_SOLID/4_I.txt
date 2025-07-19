@@ -1,0 +1,36 @@
+I->Interface Segregation Principle (ISP)
+
+Clients should not be forced to depend on interfaces they don't use.
+
+Imp point :: Prefer several small, specific interfaces over a large, general-purpose one.
+
+<-------------------------------- violation ---------------------------------------------->
+
+interface Worker {
+    void work();
+    void eat();
+}
+
+ Not a good practice , it has two independent method work () & eat()
+ So, it Violates the ISP 
+
+<-------------------------------- Solution ---------------------------------------------->
+
+//  Good - split into smaller interfaces
+
+interface Workable {
+    void work();
+}
+
+interface Eatable {
+    void eat();
+}
+
+class Human implements Workable, Eatable {
+    public void work() {}
+    public void eat() {}
+}
+
+class Robot implements Workable {
+    public void work() {}
+}

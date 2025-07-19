@@ -1,0 +1,10 @@
+The SOLID principles are five key design guidelines in OOPs that help create maintainable, flexible, and scalable software. 
+Here’s a concise explanation of each, with emphasis on the most important ones
+
+S->Single Responsibility Principle(SRP)
+O->Open/Closed Principle (OCP)
+L->Liskov Substitution Principle (LSP)
+I->Interface Segregation Principle (ISP)
+D->Dependency Inversion Principle (DIP)
+
+

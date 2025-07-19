@@ -1,0 +1,27 @@
+S->Single Responsibility Principle(SRP)
+
+A class should have only one reason to change.
+Each class should focus on a single task or responsibility.
+
+importance:
+SRP is foundational—violating it leads to tightly coupled and 
+hard-to-maintain code.
+
+
+// Bad: User class handles both data and persistence
+class User {
+    String name;
+    void saveToDatabase() { /* ... */ }
+}
+
+// Good: Separate responsibilities
+
+class User {
+    String name;
+}
+
+class UserRepository {
+    void save(User user) { /* ... */ }
+}
+
+

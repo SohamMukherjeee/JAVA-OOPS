@@ -1,0 +1,48 @@
+O->Open/Closed Principle (OCP)
+
+*Software entities should be open for extension, but closed for modification.*
+
+
+You should be able to add new functionality without changing existing code.
+
+Importance:
+OCP enables easy feature addition and reduces bugs in existing code.
+
+---------------------------------------------------------------------------
+
+
+// Violates OCP - must modify the class to add new shapes
+
+
+class AreaCalculator {
+    public double calculate(Object shape) {
+        if (shape instanceof Circle) { /* ... */ }
+        else if (shape instanceof Square) { /* ... */ }
+    }
+}
+
+// Follows OCP using polymorphism
+
+
+interface Shape {
+    double area();
+}
+
+class Circle implements Shape {
+    public double area() { return Math.PI * r * r; }
+}
+
+class Square implements Shape {
+    public double area() { return side * side; }
+}
+
+class AreaCalculator {
+    public double calculate(Shape shape) {
+        return shape.area();
+    }
+}
+
+
+
+
+

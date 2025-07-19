@@ -1,0 +1,47 @@
+D->Dependency Inversion Principle (DIP)
+
+High-level modules should not depend on low-level modules;
+both should depend on abstractions.
+
+Makes code more flexible and testable.
+
+<------------------------------violation-------------------------------------------------------->
+
+// ❌ Tight coupling
+class LightBulb {
+    void turnOn() {}
+    void turnOff() {}
+}
+
+class Switch {
+    LightBulb bulb = new LightBulb();
+    void operate() {
+        bulb.turnOn();
+    }
+}
+
+<------------------------------Solution-------------------------------------------------------->
+
+
+// ✅ Loose coupling using abstraction
+interface Switchable {
+    void turnOn();
+    void turnOff();
+}
+
+class LightBulb implements Switchable {
+    public void turnOn() {}
+    public void turnOff() {}
+}
+
+class Switch {
+    private Switchable device;
+    
+    Switch(Switchable device) {
+        this.device = device;
+    }
+
+    void operate() {
+        device.turnOn();
+    }
+}
