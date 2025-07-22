@@ -1,0 +1,12 @@
+The Factory Design Pattern is a creational pattern that provides an interface for creating 
+objects without specifying their exact class types. It lets the subclasses decide which class to instantiate.
+
+Problem it Solves
+Without Factory:
+Car car = new Sedan(); // Tight coupling
+With Factory:
+Car car = CarFactory.getCar("SEDAN"); // Loose coupling
+
+Resources
+
+https://www.youtube.com/watch?v=YIB3u0KYrUI&list=PL0zysOflRCek8kmc_jYl_6C7tpud7U2V_&index=4
