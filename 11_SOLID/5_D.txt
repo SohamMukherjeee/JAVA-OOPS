@@ -7,7 +7,7 @@ Makes code more flexible and testable.
 
 <------------------------------violation-------------------------------------------------------->
 
-// ❌ Tight coupling
+//  Tight coupling
 class LightBulb {
     void turnOn() {}
     void turnOff() {}
@@ -23,7 +23,7 @@ class Switch {
 <------------------------------Solution-------------------------------------------------------->
 
 
-// ✅ Loose coupling using abstraction
+//  Loose coupling using abstraction
 interface Switchable {
     void turnOn();
     void turnOff();
