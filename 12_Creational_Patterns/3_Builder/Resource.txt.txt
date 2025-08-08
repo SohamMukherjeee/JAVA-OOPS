@@ -1,0 +1,28 @@
+Def:
+The Builder Pattern is a creational design pattern that constructs complex objects step-by-step.
+It separates the object’s construction process from its final representation, allowing the same process 
+to create different variations.
+
+Pros (Advantages) :::
+
+Readable object creation → Code looks clean and clear.
+
+Avoids long constructors → No need to pass a dozen parameters in one go.
+
+Flexible → You can skip optional fields easily.
+
+Encapsulated construction logic → All build steps are in one place.
+
+Supports immutability → Final object can be made immutable once built.
+
+Reusability → Same builder can produce different object variations.
+
+
+Cons (Disadvantages):::
+
+More classes → Requires an extra Builder class.
+
+Slightly more code → More boilerplate than just using a constructor.
+
+Overkill for simple objects → Not worth it if the object has only a few fields.
+

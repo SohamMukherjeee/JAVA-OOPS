@@ -1,0 +1,8 @@
+| Feature                 | Factory Pattern                          | Builder Pattern                                                |
+| ----------------------- | ---------------------------------------- | -------------------------------------------------------------- |
+| **Intent**              | Create object from a group of subclasses | Step-by-step construction of complex object                    |
+| **Level of Complexity** | Medium                                   | High                                                           |
+| **Object Complexity**   | Simple to medium                         | Complex (many parts/optional parameters)                       |
+| **Control over steps**  | None                                     | Full control (via builder methods)                             |
+| **Client awareness**    | Hides subclass selection                 | Client controls how object is built                            |
+| **Examples**            | Notification system, DAO factories       | Object with many config options (e.g., `StringBuilder`, `Car`) |

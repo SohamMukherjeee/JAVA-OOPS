@@ -1,0 +1,8 @@
+The Adapter Design Pattern is a structural pattern that allows two incompatible interfaces to work together. 
+It acts as a bridge between an existing class (or system) and the one you need it to work with.
+
+
+Intent:
+To allow classes with incompatible interfaces to work together by wrapping one class with 
+an adapter that translates the interface.
+

@@ -1,0 +1,4 @@
+interface AppleCharger {
+ void chargePhone();
+    
+} 

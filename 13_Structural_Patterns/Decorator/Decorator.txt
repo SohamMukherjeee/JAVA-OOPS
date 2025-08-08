@@ -1,0 +1,13 @@
+The Decorator Design Pattern is a structural pattern that allows you to add new behavior to an 
+object dynamically without altering its structure or affecting other objects of the same class.
+
+Use When:
+
+You want to add responsibilities to individual objects, not the whole class.
+
+You want to avoid subclassing for every feature combination.
+
+You follow the Open/Closed Principle (open for extension, closed for modification).
+
+Resource
+https://www.youtube.com/watch?v=w6a9MXUwcfY
