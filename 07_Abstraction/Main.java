@@ -13,3 +13,15 @@ public class Main {
         car2.seat();
     }
 }
+
+
+//Hatchback class will cause a compilation error because it doesn’t implement all the abstract methods from Car.
+// Car has two abstract methods:
+
+// abstract void seat();
+// abstract int milege();
+
+
+// Hatchback only overrides seat(), but it does not override milege().
+
+Since Hatchback is a concrete class (not marked as abstract), it must implement both abstract methods.
