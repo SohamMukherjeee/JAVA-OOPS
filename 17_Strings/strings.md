@@ -77,6 +77,28 @@ System.out.println(sb); //hello world
 - stringbuffer capacity increases automatically when we append more data
 - default capacity is 16
 - when we create stringbuffer with string then capacity is (string length + 16)
+
   example
 
-1.
+1. ```java
+   StringBuilder sb=new StringBuilder();
+   System.out.println(sb.capacity()); //16
+   ```
+2. ```java
+   StringBuilder sb=new StringBuilder("hello");
+   System.out.println(sb.capacity()); //21 (5+16)
+   ```
+
+3. ```java
+   StringBuilder sb=new StringBuilder();
+   sb.append("abcdefghijklmnopqrs");
+   System.out.println(sb.capacity()); //34 (16*2+2)
+   ```
+4. ```java
+   StringBuilder sb=new StringBuilder("hello");
+   sb.append("abcdefghijklmnopqrs");
+   System.out.println(sb.capacity()); //44(21*2+2)
+   ```
+
+5. formula to calculate new capacity:
+   new capacity = (old capacity \* 2) + 2
