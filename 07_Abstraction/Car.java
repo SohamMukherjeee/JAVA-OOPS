@@ -17,9 +17,9 @@ class Suv extends Car{
 
 // Be declared abstract itself
 
-
 class Hatchback extends Car {
      void seat(){
         System.out.println("Hatchback: 4 sets");
      }
 }
+     

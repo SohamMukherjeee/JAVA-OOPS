@@ -24,4 +24,4 @@ public class Main {
 
 // Hatchback only overrides seat(), but it does not override milege().
 
-Since Hatchback is a concrete class (not marked as abstract), it must implement both abstract methods.
+//Since Hatchback is a concrete class (not marked as abstract), it must implement both abstract methods.
