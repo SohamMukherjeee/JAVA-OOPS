@@ -42,7 +42,7 @@ public interface InterfaceName{
 
 3. **Regular interface**
 
-# Relationships\
+# Relationships
 
 - class - class : extends
 - interface - interface : extends
@@ -69,4 +69,58 @@ class user{
     }
 }
 
+```
+
+### Multi-level inheritance
+
+```java
+
+```
+
+### Hierarchical inheritance
+
+```java
+   interface animal{
+      void sound();
+   }
+   class dog implements animal{
+      public void sound(){
+         System.out.println("Bark");
+      }
+   }
+   class cat implements animal{
+      public void sound(){
+         System.out.println("Meow");
+      }
+   }
+   class user{
+      public static void main(String args[]){
+         animal a1 = new dog();
+         a1.sound(); // Bark
+         animal a2 = new cat();
+         a2.sound(); // Meow
+      }
+   }
+```
+
+### Multiple inheritance
+
+```java
+   interface Father{
+      void feed();
+   }
+   interface Mother{
+      void feed();
+   }
+   class Child implements Father,Mother{
+      public void feed(){
+         System.out.println("Method A");
+      }
+   }
+   class user{
+      public static void main(String args[]){
+         Child obj = new Child();
+         obj.feed(); // Method A
+      }
+   }
 ```
