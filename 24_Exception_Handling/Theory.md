@@ -308,3 +308,85 @@ Success
 
      -> (correct exception) -> catch -> finally -> end
 ```
+
+---
+
+# Throws
+
+- Used to explicitly throw an exception from a method or any block of code.
+
+### FileNotFoundException Example
+
+```java
+
+package exceptionHandling;
+
+import java.io.*;
+
+public class FileUser {
+
+    public static void m1() throws FileNotFoundException {
+        m2();
+    }
+
+    public static void m2() throws FileNotFoundException {
+        m3();
+    }
+
+    public static void m3() throws FileNotFoundException {
+    	FileInputStream fin =new FileInputStream("C:\\CG_Java\\cgjava\\src\\exceptionHandling\\Text.txt");
+        System.out.println("successfull");
+    }
+
+    public static void main(String[] args) throws FileNotFoundException {
+        m1();
+    }
+}
+
+```
+
+- In the above example, the `FileNotFoundException` is thrown from the `m3` method, propagated through `m2` and `m1`, and finally handled in the `main` method.
+
+---
+
+### Custom Exception
+
+`Example.java`
+
+```java
+package exceptionHandling;
+
+public class Example {
+	public static void main(String[] args) {
+		int age = 12;
+		if (age >= 18) {
+			System.out.println("Eligible");
+		} else {
+			throw new AgeMismatchException("Age is missing...!!!");
+		}
+	}
+}
+
+
+```
+
+`AgeMismatchException.java`
+
+```java
+package exceptionHandling;
+
+public class AgeMismatchException extends RuntimeException{
+   public AgeMismatchException(String str) {
+	   super(str);
+   }
+}
+
+```
+
+`output:`
+
+```
+Exception in thread "main" exceptionHandling.AgeMismatchException: Age is missing...!!!
+	at exceptionHandling.Example.main(Example.java:9)
+
+```
