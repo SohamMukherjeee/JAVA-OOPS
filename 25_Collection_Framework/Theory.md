@@ -34,6 +34,7 @@ complete collection is present in `java.util` package.
     - **LinkedList**: A doubly-linked list implementation of the List interface. `(class)`
     - **Vector**: A synchronized resizable array implementation of the List interface. `(class)`
       - **Stack**: A subclass of Vector that implements a last-in-first-out (LIFO) stack of elements. `(class)`
+
   - **Set Interface**: A collection that does not allow duplicate elements.
     - **HashSet**: An implementation of the Set interface that uses a hash table for storage. `(class)`
     - **LinkedHashSet**: A hash table and linked list implementation of the Set interface, maintaining insertion order. `(class)`
@@ -42,6 +43,8 @@ complete collection is present in `java.util` package.
     - **PriorityQueue**: An unbounded priority queue based on a priority heap. `(class)`
     - **Deque Interface**: A double-ended queue that allows insertion and removal of elements from both ends. `(interface)`
     - **ArrayDeque**: A resizable array implementation of the Deque interface. `(class)`
+
+![alt text](Flowchart.jpeg)
 
 ### Common Methods in Collection Interface
 
@@ -65,6 +68,15 @@ complete collection is present in `java.util` package.
 2. List allows duplicate elements.
 3. List allows random access to elements using an index.
 4. List can contain null elements.
+
+---
+
+### The characteristics of Set Interface `Good to know`
+
+1. Set does not allow duplicate elements.
+2. Set does not guarantee any specific order of elements (except for LinkedHashSet and TreeSet).
+3. Set allows null elements (except for TreeSet which does not allow null if it uses natural ordering).
+4. Set does not follow indexing to access elements.
 
 ---
 
