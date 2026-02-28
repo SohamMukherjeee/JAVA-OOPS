@@ -40,6 +40,10 @@ To connect a java application to a database using JDBC, you need to follow these
    ```
 
 2. Create connection using DriverManager.
+   - To build the connection URL, you need three things:
+     1. URL
+     2. Username
+     3. Password
 
    ```java
    Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydatabase", "username", "password");
@@ -84,16 +88,22 @@ To connect a java application to a database using JDBC, you need to follow these
    - `getConnection(String url, String user, String password)` -> returns a Connection object that represents a connection to the database.
 
 2. Connection
-   - `createStatement()` -> returns a Statement object for sending SQL statements to the database.
+   - `createStatement()` -> returns a Statement.
    - `prepareStatement(String sql)` -> returns a PreparedStatement object for sending parameterized SQL statements to the database.
 
 3. Statement
-   - `executeQuery(String sql)` -> returns a ResultSet object that contains the data produced by the given query; never null.
+   - `executeQuery(String sql)` -> returns a ResultSet object that contains the data produced by the given query; never null. Ideal for DQL statements.
 
-   - `execute(String sql)` -> returns boolean T/F .
+   - `execute(String sql)` -> returns boolean T/F . Ideal for DDL & DML statements.
 
    - `executeUpdate(String sql)` -> returns an int indicating the number of rows affected by the execution of the SQL statement.
 
 4. PreparedStatement
    - executeQuery() -> returns a ResultSet object that contains the data produced by the given query; never null.
    - executeUp
+
+## Drawbacks of using Statement
+
+1. User can write malicious SQL code in the query string. This is called SQL Injection attack. To prevent this, we should use PreparedStatement instead of Statement.
+
+2. Statement does not support parameterized queries. This means that we cannot set parameters dynamically in the query string. This can lead to code duplication and maintenance issues.
